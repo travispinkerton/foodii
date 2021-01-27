@@ -38,7 +38,7 @@ margin : '15px' }}>
                                 
                                 backgroundColor : '#5878af'}} src="https://i.postimg.cc/qMK59PYT/Screen-Shot-2021-01-26-at-11-59-17-AM.png" />
   <Card.Body>
-    <Card.Title>cutHub</Card.Title>
+    <Card.Title>Fitness Trac.kr</Card.Title>
     <Card.Text>
     An App created for the purpose of logging a user's exercise routines & activities, as well as allowing users who are logged in to see the other user’s routines & activities.
     </Card.Text>
