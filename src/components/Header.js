@@ -38,7 +38,7 @@ const Header = () => {
       <Carousel.Item interval={1000}>
         <img
           className="d-block w-100"
-          src="https://i.postimg.cc/sxK6fzp6/resized.jpg"
+          src="https://scontent-sjc3-1.xx.fbcdn.net/v/t1.0-9/140053508_10218760832953522_6426119727669986507_o.jpg?_nc_cat=101&ccb=2&_nc_sid=730e14&_nc_ohc=lT4UrJc6a1oAX94Mbnr&_nc_ht=scontent-sjc3-1.xx&oh=75d03adcb39cf9611c5e15eddf9503d3&oe=60353E18"
           alt="First slide"
         />
         <Carousel.Caption>
