@@ -29,7 +29,7 @@ const Header = () => {
                     fontFamily: 'Bodoni Moda'}}>My Photography</span>
                     &nbsp;&nbsp;
                   
-    <div style={{paddingBottom : '500px',
+    <div style={{paddingBottom : '70px',
                 maxHeight : 'fit-content',
                 
                 }}id="images">

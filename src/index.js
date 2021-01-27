@@ -36,11 +36,11 @@ const App = () => {
       <Projects/>
       &nbsp;
       <Boxes/>
-      <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+      
       <Tech/>
-      
-      
       <Bulmaspin/>
+      
+      
       
       <AirbnbExample/>
       
