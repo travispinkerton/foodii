@@ -34,7 +34,7 @@ const Nav = () => {
             console.log('clicked');
         }}>
           <Router>
-  <div id='welcome' ><p style={{fontSize : '22px',
+  <div id='welcome' ><p style={{fontSize : '24px',
             fontFamily: 'Bodoni Moda',
             fontVariant : 'small-caps'}}>Welcome to my page! &nbsp;&nbsp;</p></div>
   <Link onClick={() => {

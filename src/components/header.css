@@ -3,10 +3,19 @@
     border: 15px groove darkcyan;
     border-radius: 10%;
     background-color: black;
+    animation: fadeVisibility 0.5s;
 }
 
+@keyframes fadeVisibility {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
 
-@media (max-width: 850px) {
+@media (max-width: 910px) {
   
   #banner {
     display : flex;
@@ -24,7 +33,11 @@
   }
 }
 
-
+#welcome {
+  font-weight: 1000;
+  
+  font-style: oblique;
+}
 
 #root {
   background-color: #d5ede6;
