@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import {Row, Col, Image, Container } from 'react-bootstrap';
-
+import './Tech.css';
 const Tech = () => {
-    return (<Container style={{display : 'flex',
-    marginTop : '60px',
+    return (<Container id="tech" style={{display : 'flex',
+    
     flexDirection : 'row',
     flexWrap : 'wrap',
     justifyContent : 'space-evenly',
@@ -15,6 +15,7 @@ const Tech = () => {
           </Col>
           <Col xs={6} md={4}>
             <Image  style={{paddingBottom : '0px',
+            
                            paddingTop : '15px'}} src="https://i.postimg.cc/FzZTDvzb/react-logo-resized.png" rounded />
           </Col>
           <Col xs={6} md={4}>
@@ -47,7 +48,7 @@ const Tech = () => {
             <Image src="https://i.postimg.cc/2SwvbQTV/bulma-logo.png" rounded />
           </Col>
           <Col xs={6} md={4}>
-            <Image src="https://i.postimg.cc/jSxyz1pT/chakra-ui-logo.png" rounded />
+            <Image style={{paddingTop : '10px'}} src="https://i.postimg.cc/jSxyz1pT/chakra-ui-logo.png" rounded />
           </Col>
           
         </Row>

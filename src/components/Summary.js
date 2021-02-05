@@ -22,8 +22,11 @@ const Summary = () => {
   <Link onClick={() => {
     window.open('https://www.linkedin.com/in/traviswremington/')
   }}><a><img class="linkedin" src="https://i.postimg.cc/nr9CCDTW/linkedinlogo.png"></img></a></Link>
+   <Link onClick={() => {
+        window.open('mailto:traviswremington@gmail.com');
+      }}>
   <p style={{fontSize : '25px'
-            }}>&nbsp;<i class="fas fa-envelope-square fa-2x"></i>&nbsp;&nbsp;</p>
+            }}>&nbsp;<i class="fas fa-envelope-square fa-2x"></i>&nbsp;&nbsp;</p></Link>
   </div>
   </Router>
   
@@ -34,15 +37,22 @@ const Summary = () => {
     <b><i class="fas fa-map-marker"></i>&nbsp;&nbsp;San Luis Obispo, CA</b>
     &nbsp;
     &nbsp;
+    <Router>
+      <Link onClick={() => {
+        window.open('mailto:traviswremington@gmail.com');
+      }}>
     <b><a href=" mailtto: traviswremington@gmail.com"><p style={{fontSize : '25px',
           fontStyle : 'oblique',
-          fontVariant : 'small-caps'}}>traviswremington@gmail.com</p></a></b>
+          fontVariant : 'small-caps'}}>traviswremington@gmail.com</p></a></b></Link>
       <p>
+      
         
         <p>Designed using: <b>Chakra, Bulma, React, React-Bootstrap</b></p>
         <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
         is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
       </p>
+      
+      </Router>
     </div>
   </footer>)
   

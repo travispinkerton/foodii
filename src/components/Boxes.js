@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { Grid, Box, GridItem } from '@chakra-ui/react'
-
+import './Tech.css';
 
 const Boxes = () => {
     return (<>
         <Grid
+        style={{marginBottom : '135px'}}
         h="200px"
+        
         templateRows="repeat(2, 1fr)"
         
         templateColumns="repeat(5, 1fr)"
@@ -20,9 +22,10 @@ const Boxes = () => {
         <GridItem style={{boxShadow : '10px 12px #aaaaaa'}}  colSpan={2} bg="papayawhip" />
         <GridItem style={{boxShadow : '10px 12px #aaaaaa'}}  colSpan={4} bg="tomato" />
       </Grid>
+      
     
  
-  </>)
+      </>)
 }
 
 export default Boxes;

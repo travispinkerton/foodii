@@ -5,6 +5,27 @@
     background-color: black;
 }
 
+
+@media (max-width: 850px) {
+  
+  #banner {
+    display : flex;
+  }
+  
+  #contacts {
+    display: inline;
+    
+  }
+  #welcome {
+    display: none;
+  }
+  #email {
+    display: none;
+  }
+}
+
+
+
 #root {
   background-color: #d5ede6;
 }

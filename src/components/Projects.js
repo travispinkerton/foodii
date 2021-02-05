@@ -6,6 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 const Projects = () => {
     return <div style={{display : 'flex',
                         flexDirection : 'row',
+                        flexWrap : 'wrap',
                         
                         justifyContent : "space-evenly"
                        }}><Card style={{ width: '18rem',

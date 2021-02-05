@@ -21,6 +21,7 @@ const Nav = () => {
         borderLeftColor: '#95dfe3',
         borderRightColor: '#c095e3',
         flexDirection : 'row',
+        
         backgroundColor : 'black'}}>
               T<p style={{color : '#fff384'}}>W</p>R
           </div>
@@ -28,14 +29,14 @@ const Nav = () => {
           Travis William Remington
           
         </h1>
-        <Center bg="tomato" h="100px" color="white" onClick={(event) => {
+        <Center id='banner' bg="tomato" h="100px" color="white" onClick={(event) => {
             event.preventDefault(); 
             console.log('clicked');
         }}>
           <Router>
-  <p style={{fontSize : '26px',
+  <div id='welcome' ><p style={{fontSize : '22px',
             fontFamily: 'Bodoni Moda',
-            fontVariant : 'small-caps'}}>Welcome to my page! &nbsp;&nbsp;</p>
+            fontVariant : 'small-caps'}}>Welcome to my page! &nbsp;&nbsp;</p></div>
   <Link onClick={() => {
     window.open('https://github.com/travispinkerton')
   }}><a><img class="FB" src="https://i.postimg.cc/Bv0f206n/githublogo.png"></img></a></Link>
@@ -45,13 +46,18 @@ const Nav = () => {
   
 
 
-  </Router>
+  <Link onClick={() => {
+    window.open('mailto:traviswremington@gmail.com');
+  }}>
   <p style={{fontSize : '25px'
             }}>&nbsp;<i class="fas fa-envelope-square fa-2x"></i>&nbsp;&nbsp;</p>
+  </Link>
+          </Router>
 
-<p style={{fontSize : '25px',
+<p id='email' style={{fontSize : '25px',
           fontStyle : 'oblique',
           fontVariant : 'small-caps'}}>traviswremington@gmail.com</p>
+          
 
 </Center>
         <h2 class="subtitle">

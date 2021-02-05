@@ -1,0 +1,41 @@
+
+#tech {
+    margin-top: 60px;
+}
+
+#maps {
+    padding-bottom: 50px;
+}
+#boxes {
+    
+   padding-bottom: 200px;
+}
+
+@media (max-width : 950px){
+
+    #maps {
+        padding-bottom: 400px;
+    }
+
+    #boxes {
+        padding-bottom: 200px;
+    }
+    #tech {
+       
+        margin-top: 360px;
+    }
+    
+}
+
+@media (max-width : 650px){
+
+    
+    #tech {
+       
+        margin-top: 450px;
+    }
+    
+}
+
+
+

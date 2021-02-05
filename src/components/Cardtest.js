@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { AspectRatio, Container, GridItem } from '@chakra-ui/react'
-
+import './Tech.css';
 // Sample card from Airbnb
 
 // const property = {
@@ -56,9 +56,9 @@ justifyContent : 'center'}} maxW="680px" height="500px" ratio={2}>
                     fontSize : '30px',
                     fontWeight : '300pt',
                     justifyContent : 'center'}}>My Home!</p></div>
-<AspectRatio ratio={16 / 9}>
+<AspectRatio id="maps" ratio={16 / 9}>
 
-<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d52117.556456524064!2d-120.70540551088614!3d35.2724910045086!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1611617405351!5m2!1sen!2sus" width="600" height="450" frameborder="0" style={{height : '650px', border: "0"}} allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d52117.556456524064!2d-120.70540551088614!3d35.2724910045086!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1611617405351!5m2!1sen!2sus" width="600" height="450" frameborder="0" style={{height : '600px', border: "0"}} allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
 </AspectRatio>
 
 
