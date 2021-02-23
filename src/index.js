@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import Header from './components/Header';
 import Summary from './components/Summary';
@@ -18,6 +18,7 @@ import Tech from './components/Tech'
 
 const App = () => {
   // const [message, setMessage] = useState('');
+  const [filterValue, setFilterValue] = useState('');
 
   // useEffect(() => {
   //   getSomething()
@@ -31,7 +32,10 @@ const App = () => {
 
   return (
     <div className="App" id='App' >
-      <Testnav/>
+      <Testnav
+      setFilterValue={setFilterValue}
+      filterValue={filterValue}
+      />
       
       <Projects/>
       &nbsp;

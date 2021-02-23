@@ -5,6 +5,7 @@ const {
 } = require('./index');
 
 const { createProducts } = require('./products');
+const { createUser } = require('./users');
 
 async function buildTables() {
 	try {
@@ -41,9 +42,13 @@ async function buildTables() {
 
     CREATE TABLE users(
       id SERIAL PRIMARY KEY,
-      name varchar(255) UNIQUE NOT NULL,
-      address VARCHAR(255) NOT NULL,
-      imageURL VARCHAR(255) DEFAULT 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/No_image_available.svg/600px-No_image_available.svg.png'
+      firstname varchar(255) UNIQUE NOT NULL,
+      lastname varchar(255) UNIQUE NOT NULL,
+      email VARCHAR(255) UNIQUE NOT NULL,
+      address VARCHAR(255) UNIQUE NOT NULL,
+      imageURL VARCHAR(255) DEFAULT 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/No_image_available.svg/600px-No_image_available.svg.png',
+      username VARCHAR(255) UNIQUE NOT NULL,
+      password VARCHAR(255) UNIQUE NOT NULL
       );
     
       CREATE TABLE messages(
@@ -52,6 +57,7 @@ async function buildTables() {
       "userId" INTEGER REFERENCES users(id),
       "dateSent" Timestamp DEFAULT NOW()
       );
+
       CREATE TABLE products(
         id SERIAL PRIMARY KEY,
         name VARCHAR(255) NOT NULL,
@@ -246,29 +252,31 @@ async function createInitialUsers() {
 		const joseph = await createUser({
 			firstName: 'Joseph',
 			lastName: 'Malotte',
-			email: 'jmalotte510@gmail.com',
+      email: 'jmalotte510@gmail.com',
+      address : '11020 Sycamore Drive, Palo Alto CA',
 			imageUrl: 'http://www.pennlalsa.org/uploads/1/3/4/8/13489220/current-anthony-headshot_orig.png',
 			username: 'Joeyisafoodie',
-			password : 'splenda1984',
-			isAdmin : 'false'
+			password : 'splenda1984'
+			
 		});
 		const martin = await createUser({
 			firstName: 'Martin',
 			lastName: 'Phillips',
-			email: 'phillipsconstruction@gmail.com',
+      email: 'phillipsconstruction@gmail.com',
+      address: '223 Haight Street, San Francisco CA',
 			imageUrl: 'https://www.thomharrisdesign.com/wp-content/uploads/2011/06/Phillips-Construction-blog-500x384.jpg',
 			username: 'Hammer-Time',
-			password: 'nailedit',
-			isAdmin : 'false'
+			password: 'nailedit'
+
 		});
 		const jessie = await createUser({
 			firstName: 'Jessie',
 			lastName: 'Nguyen',
-			email: 'lockjessmonster@gmail.com',
+      email: 'lockjessmonster@gmail.com',
+      address: '3669 Perfumo Canyon Dr, San Luis Obispo CA',
 			imageUrl: 'https://static.standard.co.uk/s3fs-public/styles/story_large/public/thumbnails/image/2014/10/27/11/lochnessmonster2710a.jpg',
 			username: 'tinker-tailor',
-			password: 'mossy+bossy',
-			isAdmin: 'true'
+			password: 'mossy+bossy'
 		});
 		console.log(joseph, martin, jessie)
 		console.log('Users created:');
@@ -336,7 +344,7 @@ async function createInitialOrderProducts() {
 async function populateInitialData() {
 	try {
 		await createInitialProducts();
-		// await createInitialUsers();
+		await createInitialUsers();
 		// await createInitialOrders();
 		// await createInitialOrderProducts();
 		// await createInitialReviews();

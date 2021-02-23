@@ -6,7 +6,18 @@
     animation: fadeVisibility 0.5s;
 }
 
+.icons {
+  margin: 15px;
+  display: flex;
+  flex-direction: row;
+  
+  justify-content: space-between;
+}
 
+#banner {
+  padding: 3px;
+
+}
 
 @media (max-width: 910px) {
   
@@ -23,10 +34,10 @@
     
   }
   #welcome {
-    display: none;
+    display: flex;
   }
   #email {
-    display: none;
+    display: flex;
   }
 }
 
