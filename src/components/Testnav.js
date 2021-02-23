@@ -29,7 +29,7 @@ const Nav = () => {
           <Router>
   <div id='welcome' ><p style={{fontSize : '24px',
             fontFamily: 'Bodoni Moda',
-            fontVariant : 'small-caps'}}>Welcome to my page! &nbsp;&nbsp;</p></div>
+            fontVariant : 'small-caps'}}>Welcome to my page hmmmmmm! &nbsp;&nbsp;</p></div>
   <Link onClick={() => {
     window.open('https://github.com/travispinkerton')
   }}><a><img class="FB" src="https://i.postimg.cc/Bv0f206n/githublogo.png"></img></a></Link>
