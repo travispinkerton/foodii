@@ -4,6 +4,8 @@ const {
   // other db methods 
 } = require('./index');
 
+const { createProducts } = require('./products');
+
 async function buildTables() {
 	try {
 		await client.connect();
@@ -14,9 +16,11 @@ async function buildTables() {
     await client.query(`
             DROP TABLE IF EXISTS messages;
             DROP TABLE IF EXISTS reviews;
-            DROP TABLE IF EXISTS products;
+            
             DROP TABLE IF EXISTS order_products;
+            
             DROP TABLE IF EXISTS orders;
+            DROP TABLE IF EXISTS products;
             
             
             DROP TABLE IF EXISTS users;
@@ -55,7 +59,7 @@ async function buildTables() {
         price NUMERIC(10,2) NOT NULL,
         imageURL VARCHAR(255) DEFAULT 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/No_image_available.svg/600px-No_image_available.svg.png',
         "inStock" BOOLEAN DEFAULT true,
-        useByDate VARCHAR(255) UNIQUE NOT NULL,
+        "useByDate" VARCHAR(255) NOT NULL,
         category VARCHAR(255) NOT NULL
         );
 
@@ -99,7 +103,7 @@ async function createInitialProducts() {
 			price: '8.99',
       imageurl: 'https://i.ytimg.com/vi/GI4iAcTA9KY/maxresdefault.jpg',
       inStock: true,
-      useByDate : '03/05/2021',
+      useByDate : '03/06/21',
 			category: 'beef'
 		});
 		const chicken = await createProducts({
@@ -332,10 +336,10 @@ async function createInitialOrderProducts() {
 async function populateInitialData() {
 	try {
 		await createInitialProducts();
-		await createInitialUsers();
-		await createInitialOrders();
-		await createInitialOrderProducts();
-		await createInitialReviews();
+		// await createInitialUsers();
+		// await createInitialOrders();
+		// await createInitialOrderProducts();
+		// await createInitialReviews();
 		// create useful starting data
 	} catch (error) {
 		throw error;
@@ -343,6 +347,6 @@ async function populateInitialData() {
 }
 
 buildTables()
-  // .then(populateInitialData)
+  .then(populateInitialData)
   .catch(console.error)
   .finally(() => client.end());
