@@ -6,19 +6,16 @@
     animation: fadeVisibility 0.5s;
 }
 
-@keyframes fadeVisibility {
-  0% {
-      opacity: 0;
-  }
-  100% {
-      opacity: 1;
-  }
-}
+
 
 @media (max-width: 910px) {
   
+  #produce {
+    background-image : url('https://www.bigy.com/Media/Default/Produce/fruitVeggies2.jpg')
+  }
   #banner {
     display : flex;
+    
   }
   
   #contacts {
@@ -84,7 +81,14 @@ $primary-invert: $pink-invert;
 */
 /*! bulma.io v0.8.2 | MIT License | github.com/jgthms/bulma */
 
-
+@keyframes fadeVisibility {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
 
 @-webkit-keyframes spinAround {
     from {

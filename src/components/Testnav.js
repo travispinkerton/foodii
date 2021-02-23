@@ -4,31 +4,24 @@ import {Link, Linkto, BrowserRouter as Router} from 'react-router-dom';
 
 import './header.css';
 const Nav = () => {
-    return (<section id="title" class="hero is-small is-dark is-bold">
+    return (<section id="title" class="hero is-small is-primary is-bold">
     <div class="hero-body">
       <div class="header-nav">
-          <div style={{border: '7px double white',
-          borderRadius : '50%',
-          height: '79px',
-          color: 'white',
-        width : '79px',
-        
-        display : 'flex',
-        paddingTop: '21px',
-        paddingRight: '5px',
-        paddingLeft: '9px',
-        letterSpacing: '4px',
-        borderLeftColor: '#95dfe3',
-        borderRightColor: '#c095e3',
-        flexDirection : 'row',
-        
-        backgroundColor : 'black'}}>
-              T<p style={{color : '#fff384'}}>W</p>R
-          </div>
-        <h1 class="title">
-          Travis William Remington
+      <i class="fas fa-home" style={{fontSize : '40px',
+                                    color : 'white'}}></i>
+                                    
+      <i class="fas fa-shopping-cart" style={{fontSize : '40px',
+                                    color : 'white'}}></i>
+
+          <p style={{color : 'white',
+                     fontWeight : 'bolder',
+                     fontSize : '40px',
+                     display : 'flex',
+                     justifyContent : 'center'}}>Food 4 Less</p>
           
-        </h1>
+        <div class='produce'><img src="https://www.bigy.com/Media/Default/Produce/fruitVeggies2.jpg"></img></div>
+
+        
         <Center id='banner' bg="tomato" h="100px" color="white" onClick={(event) => {
             event.preventDefault(); 
             console.log('clicked');
