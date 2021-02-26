@@ -1,5 +1,14 @@
 const productsRouter = require('express').Router();
-
+const { getAllProducts } = require('../db/products'); 
+productsRouter.get('/', async (req, res, next) => {
+	try {
+		const products = await getAllProducts();
+		console.log('products:', products);
+		res.send(products);
+	} catch ({ name, message }) {
+		next({ name, message });
+	}
+});
 
 productsRouter.post('/', async (req, res, next) => {
 	

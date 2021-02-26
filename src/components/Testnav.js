@@ -18,7 +18,26 @@ const Nav = ({filterValue, setFilterValue}) => {
       <div class="header-nav">
       <div class="icons"><i class="fas fa-home" style={{fontSize : '40px',
                                     color : 'white'}}></i>
-                                    
+      <div style={{border: '7px double white',
+          borderRadius : '50%',
+          height: '79px',
+          color: 'white',
+        width : '79px',
+     
+        display : 'flex',
+        paddingTop: '21px',
+        paddingRight: '5px',
+        paddingLeft: '9px',
+        letterSpacing: '2px',
+        borderLeftColor: '#95dfe3',
+        borderRightColor: '#c095e3',
+        flexDirection : 'row',
+        
+        backgroundColor : 'black'}}>
+              <p style={{color : 'yellowgreen',
+                        paddingRight : '25px',
+                        fontSize : '18px'}}>foodii</p>
+          </div>                             
       <i class="fas fa-shopping-cart" style={{fontSize : '40px',
                                     color : 'white'}}></i></div>
 

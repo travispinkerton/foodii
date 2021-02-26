@@ -15,10 +15,16 @@ import Tech from './components/Tech'
 //   App
 // } from './components';
 
+// import { getCurrentUser, getCurrentUserToken, getCart } from './auth';
 
 const App = () => {
   // const [message, setMessage] = useState('');
-  const [filterValue, setFilterValue] = useState('');
+  // const [token, setToken] = useState(getCurrentUserToken(), []);
+	// const [currentUser, setCurrentUser] = useState(getCurrentUser());
+	const [orders, setOrders] = useState([{}]);
+	// const [cart, setCart] = useState(getCart());
+	const [filterValue, setFilterValue] = useState('');
+  
 
   // useEffect(() => {
   //   getSomething()
@@ -37,7 +43,10 @@ const App = () => {
       filterValue={filterValue}
       />
       
-      <Projects/>
+      <Projects 
+      	// setCart={setCart}
+        // cart={cart}
+        />
       &nbsp;
       <Boxes/>
       

@@ -15,4 +15,4 @@ apiRouter.get("/health", (req, res, next) => {
 })
 apiRouter.use('/products', productsRouter);
 
-module.exports = { apiRouter } ;
+module.exports =  apiRouter  ;

@@ -1,5 +1,15 @@
 const { client } = require('./index');
 
+const getAllProducts = async () => {
+	try {
+		const { rows: products } = await client.query(`select * from products`);
+		return products;
+	} catch (error) {
+		console.error(error);
+		throw error;
+	}
+};
+
 const createProducts = async product => {
 	// Field length validation
 	if (Object.keys(product).length !== 7) {
@@ -18,4 +28,6 @@ const createProducts = async product => {
 	}
 };
 
-module.exports = { createProducts }
+module.exports = { 
+    createProducts,
+    getAllProducts  }

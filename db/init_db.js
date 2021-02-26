@@ -107,7 +107,7 @@ async function createInitialProducts() {
 			name: 'Steak',
 			description: 'Great Marbling',
 			price: '8.99',
-      imageurl: 'https://i.ytimg.com/vi/GI4iAcTA9KY/maxresdefault.jpg',
+      imageurl: 'https://d2d8wwwkmhfcva.cloudfront.net/1200x/filters:fill(FFF,true):format(jpg)/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_fac653e4-2a5c-43ea-af55-da102f07db2c.jpg',
       inStock: true,
       useByDate : '03/06/21',
 			category: 'beef'
@@ -220,11 +220,90 @@ async function createInitialProducts() {
       inStock: true,
       useByDate : '03/10/2021',
 			category: 'beef'
+    });
+    
+    const bacon = await createProducts({
+			name: 'Bar S Bacon',
+			description: 'Natually Hardwood Smoked Thick Cut Bacon 12oz',
+			price: '3.58',
+			imageurl: 'https://d2lnr5mha7bycj.cloudfront.net/product-image/file/large_92767665-b3fb-4444-9fa5-e2971bb35112.jpg',
+      inStock: true,
+      useByDate : '03/25/2021',
+			category: 'pork'
+    });
+    
+    const granolaBars = await createProducts({
+			name: 'Nature Valley Granola Bars',
+			description: 'Almond, Chewy, Sweet & Salty Nut, 6 ct.',
+			price: '2.58',
+			imageurl: 'https://d2lnr5mha7bycj.cloudfront.net/product-image/file/large_3c7d3542-d4ed-4c6b-b63b-648e708012ff.png',
+      inStock: true,
+      useByDate : '03/28/2021',
+			category: 'snacks'
+    });
+    
+    const wheatBread = await createProducts({
+			name: 'Brownberry/Arnold/Oroweat',
+			description: 'Organic 22 Grains & Seeds Bread, 27oz',
+			price: '4.10',
+			imageurl: 'https://d2lnr5mha7bycj.cloudfront.net/product-image/file/large_710e249a-cba1-4688-8d74-dfed54360bea.jpg',
+      inStock: true,
+      useByDate : '03/15/2021',
+			category: 'bakery'
+    });
+    
+    const goldfish = await createProducts({
+			name: 'Pepperidge Farm Goldfish',
+			description: 'Xtra Cheddar Crackers 11oz',
+			price: '3.08',
+			imageurl: 'https://d2lnr5mha7bycj.cloudfront.net/product-image/file/large_a22e64fa-c442-4c25-8fd5-8e7899342680.jpg',
+      inStock: true,
+      useByDate : '04/25/2021',
+			category: 'snacks'
+    });
+    
+    const milk = await createProducts({
+			name: 'Sequoia Farms Milk',
+			description: '2% milkfat 1gal',
+			price: '3.38',
+			imageurl: 'https://d2d8wwwkmhfcva.cloudfront.net/1200x/filters:fill(FFF,true):format(jpg)/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_da5446e1-b5ac-462f-aa1e-1c696643500e.png',
+      inStock: true,
+      useByDate : '03/10/2021',
+			category: 'dairy'
+    });
+    
+    const banana = await createProducts({
+			name: 'Banana',
+			description: '~$0.26/item | $0.61/ln',
+			price: '3.38',
+			imageurl: 'https://d2d8wwwkmhfcva.cloudfront.net/1200x/filters:fill(FFF,true):format(jpg)/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_660f23f5-11f9-4e5d-9b64-7e69348ade1a.jpg',
+      inStock: true,
+      useByDate : '03/01/2021',
+			category: 'produce'
+    });
+    
+    const water = await createProducts({
+			name: 'Niagara Purified Drinking Water',
+			description: '35 x 16.9 fl oz',
+			price: '3.78',
+			imageurl: 'https://d2d8wwwkmhfcva.cloudfront.net/1200x/filters:fill(FFF,true):format(jpg)/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_5677c9b3-e5b1-42cb-b38c-e2689f980f39.jpg',
+      inStock: true,
+      useByDate : '06/01/2021',
+			category: 'beverage'
+    });
+    const grapes = await createProducts({
+			name: 'Red Seadless Grapes',
+			description: '$3.08/lb',
+			price: '3.08',
+			imageurl: 'https://d2d8wwwkmhfcva.cloudfront.net/1200x/filters:fill(FFF,true):format(jpg)/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_4f1e62a9-3d61-4f5f-8f71-f51d61cf8cec.jpg',
+      inStock: true,
+      useByDate : '03/08/2021',
+			category: 'produce'
 		});
 
 
 		console.log('Products created:');
-		console.log(beef, chicken, pork, shrimp, scallops, salmon, alpastor, turkey, roastbeef, bluefin, pastrami);
+		console.log(beef, chicken, pork, shrimp, scallops, salmon, alpastor, turkey, roastbeef, bluefin, pastrami, bacon, granolaBars, milk, goldfish, banana, grapes, water);
 		console.log('Finished creating Products!');
 	} catch (error) {
 		console.error('Error creating Products!');

@@ -1,15 +1,72 @@
 import React, { useState, useEffect } from 'react';
 import { Card, Button } from 'react-bootstrap';
+import { Box,  Text, Image} from '@chakra-ui/react';
+import { callApi } from '../api';
 import {Link, Linkto, BrowserRouter as Router} from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Projects = () => {
-    return <div style={{display : 'flex',
-                        flexDirection : 'row',
-                        flexWrap : 'wrap',
-                        
-                        justifyContent : "space-evenly"
-                       }}><Card style={{ width: '18rem',
+  const [productList, setProductList] = useState([{}]);
+
+  const fetchProducts = async () => {
+		const config = {
+			method: 'GET',
+			path: '/products'
+		};
+
+		try {
+			const products = await callApi(config);
+			setProductList(products);
+			return products;
+		} catch (error) {
+			console.error(error);
+    }
+    
+    
+
+  };
+  
+  useEffect(() => {
+    fetchProducts();
+  }, []);
+
+
+    return <><p style={{padding : '6px',
+    fontFamily:'IBM Plex Mono, monospace',
+    fontStyle : 'oblique',
+    fontSize: '23px',
+    letterSpacing : '2px',
+    fontVariant: 'small-caps'}}>Featured Products:</p>
+    
+    
+    
+    
+    <div ><div style={{  
+  height: 'fit-content',
+  display: 'flex',
+  width : '500px',
+  flexDirection: 'row',
+  justifyContent: 'flex-start',
+  alignItems: 'flex-start',
+  flexWrap: 'nowrap',
+  fontFamily: 'Marmelad sans-serif',
+  color: '#333',
+  
+  overflowX: 'scroll',
+  
+                       }}>{productList.map(product => {
+                        return (
+                          <Box minWidth='300px' border='5px groove peru'>
+                        <Text fontFamily='courier' letterSpacing='1px' fontSize='xl'>Name: <b>{product.name}</b></Text>
+                      <Image borderRadius='20px' src={product.imageurl} />
+                      <Text fontSize='l'>Description: {product.description}</Text>
+                      <Text fontSize='l'>Price: ${product.price}/lb</Text>
+                      <Text fontSize='l'>Category: {product.category}</Text>
+                      <Text fontSize='l'>Use By Date: {product.useByDate}</Text>
+                          </Box>
+                        );
+                      })}</div>
+    <Card style={{ width: '18rem',
                        boxShadow : '10px 12px #aaaaaa',
                        border : '5px groove white',
                         margin : '15px'
@@ -78,7 +135,7 @@ margin : '15px' }}>
 </Card>
 
 </div>
-
+</>
 }
 
 export default Projects;
