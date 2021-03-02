@@ -2,7 +2,7 @@ const { client } = require('./index');
 
 const getAllProducts = async () => {
 	try {
-		const { rows: products } = await client.query(`select * from products`);
+		const  { rows : products }  = await client.query(`select * from products`);
 		return products;
 	} catch (error) {
 		console.error(error);

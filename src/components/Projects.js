@@ -7,6 +7,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Projects = () => {
   const [productList, setProductList] = useState([{}]);
+  console.log('products', productList);
+  
+
+  
 
   const fetchProducts = async () => {
 		const config = {
@@ -15,23 +19,23 @@ const Projects = () => {
 		};
 
 		try {
-			const products = await callApi(config);
+      const products = await callApi(config);
+      
 			setProductList(products);
 			return products;
 		} catch (error) {
 			console.error(error);
     }
-    
-    
-
   };
   
   useEffect(() => {
     fetchProducts();
+    
   }, []);
+  
 
 
-    return <><p style={{padding : '6px',
+    return (<><p style={{padding : '6px',
     fontFamily:'IBM Plex Mono, monospace',
     fontStyle : 'oblique',
     fontSize: '23px',
@@ -41,7 +45,7 @@ const Projects = () => {
     
     
     
-    <div ><div style={{  
+    <div style={{  
   height: 'fit-content',
   display: 'flex',
   width : '500px',
@@ -54,15 +58,15 @@ const Projects = () => {
   
   overflowX: 'scroll',
   
-                       }}>{productList.map(product => {
-                        return (
-                          <Box minWidth='300px' border='5px groove peru'>
-                        <Text fontFamily='courier' letterSpacing='1px' fontSize='xl'>Name: <b>{product.name}</b></Text>
-                      <Image borderRadius='20px' src={product.imageurl} />
-                      <Text fontSize='l'>Description: {product.description}</Text>
-                      <Text fontSize='l'>Price: ${product.price}/lb</Text>
-                      <Text fontSize='l'>Category: {product.category}</Text>
-                      <Text fontSize='l'>Use By Date: {product.useByDate}</Text>
+                       }}>{productList.map( ({id, name , description, price, imageurl, inStock, useByDate, category }) => {
+                        return ( 
+                          <Box  ley={id} minWidth='300px' border='5px groove peru'>
+                        <Text fontFamily='courier' letterSpacing='1px' fontSize='xl'>Name: <b>{name}</b></Text>
+                      <Image borderRadius='20px' src={imageurl} />
+                      <Text fontSize='l'>Description: {description}</Text>
+                      <Text fontSize='l'>Price: ${price}/lb</Text>
+                      <Text fontSize='l'>Category: {category}</Text>
+                      <Text fontSize='l'>Use By Date: {useByDate}</Text>
                           </Box>
                         );
                       })}</div>
@@ -134,8 +138,9 @@ margin : '15px' }}>
   </Card.Body>
 </Card>
 
-</div>
+
 </>
+    )
 }
 
 export default Projects;

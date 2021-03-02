@@ -1,6 +1,8 @@
 // This is the Web Server
 const express = require('express');
 const server = express();
+require('dotenv').config();
+const cors = require('cors');
 
 // create logs for everything
 const morgan = require('morgan');
@@ -9,6 +11,7 @@ server.use(morgan('dev'));
 // handle application/json requests
 const bodyParser = require('body-parser');
 server.use(bodyParser.json());
+server.use(cors());
 
 // here's our static files
 const path = require('path');

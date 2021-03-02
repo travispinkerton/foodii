@@ -6,3 +6,7 @@ export { default as Boxes } from './Boxes';
 export { default as AirbnbExample } from './Cardtest';
 export { default as Projects } from './Projects';
 export { default as Tech } from './Tech';
+export { default as ShoppingCart } from './Cart';
+export  { MyOrders}  from './MyOrders';
+export { CartProductCard } from './CartProductCard';
+export { default as Orders } from './Orders';

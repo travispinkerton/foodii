@@ -18,24 +18,30 @@
     "@chakra-ui/react": "^1.1.6",
     "@emotion/react": "^11.1.4",
     "@emotion/styled": "^11.0.0",
+    "@stripe/stripe-js": "^1.13.1",
     "axios": "^0.19.2",
     "bcrypt": "^5.0.0",
     "bootstrap": "^4.6.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "framer-motion": "^3.2.2-rc.1",
+    "jsonwebtoken": "^8.5.1",
     "morgan": "^1.10.0",
     "pg": "^8.2.1",
     "react": "^16.13.1",
     "react-bootstrap": "^1.4.3",
     "react-dom": "^16.13.1",
     "react-fa": "^5.0.0",
+    "react-images-upload": "^1.2.8",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "^3.4.1"
+    "react-scripts": "^3.4.1",
+    "stripe": "^8.137.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.4"
   },
-  "proxy": "http://localhost:3000",
+  "proxy": "http://localhost:5000",
   "browserslist": {
     "production": [
       ">0.2%",
